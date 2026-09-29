@@ -1,0 +1,38 @@
+{
+  "name": "pi-hermes-loop",
+  "version": "0.1.0",
+  "description": "Hermes-style self-improvement loop for the local Pi coding agent: curated memory, skills the agent writes itself, and a background review after each turn.",
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "hermes",
+    "self-improvement"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions/index.ts"
+    ],
+    "skills": [
+      "./skills"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "^0.74.2",
+    "@earendil-works/pi-coding-agent": "^0.74.2",
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.0"
+  },
+  "scripts": {
+    "test": "node --experimental-strip-types --test test/**/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  }
+}
